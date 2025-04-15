@@ -97,9 +97,6 @@ A color picker is used in the admin panel for easy selection.
 ---
 
 ## 🛠 Developer Notes
-
-- Configuration fields are declared under `etc/adminhtml/system.xml`.
-- Color fields use a custom frontend model: `Themestar\SocialShare\Block\Adminhtml\ColorPicker`.
 - All platform buttons and meta tags are conditionally rendered based on admin configuration.
 
 ---
