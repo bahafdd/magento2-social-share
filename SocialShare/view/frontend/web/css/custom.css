@@ -1,0 +1,10 @@
+span{
+ display: inline-block
+}
+.social-share svg{
+    position: relative;
+  top: 5px;
+}
+.social-share .social-icon{
+    padding: 7px;
+}

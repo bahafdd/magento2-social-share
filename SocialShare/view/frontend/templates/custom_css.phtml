@@ -1,0 +1,7 @@
+<?php
+$customCss = $block->getCustomCss();
+if ($customCss): ?>
+    <style>
+        <?php echo $this->escapeHtml($customCss); ?>
+    </style>
+<?php endif; ?>

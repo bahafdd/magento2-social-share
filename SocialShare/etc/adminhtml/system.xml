@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system_file.xsd">
+    <system>
+        <tab id="themestar" translate="label" sortOrder="100">
+            <label>Themestar</label>
+        </tab>
+        <section id="social_share" translate="label" sortOrder="101" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Social Share</label>
+            <tab>themestar</tab>
+            <resource>Themestar_SocialShare::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enable_module" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Social Share Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="facebook_group" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Facebook Settings</label>
+                <field id="facebook" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="design_version" translate="label" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Facebook Button Design</label>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                </field>
+                <field id="facebook_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="facebook_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Facebook Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="fb_og_enable" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Facebook Open Graph (OG)</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="twitter_group" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Twitter Settings</label>
+                <field id="twitter" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Twitter Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                 <!-- Added design field -->
+                <field id="twitter_design" translate="label" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Icon Design</label>
+                    <comment>Specify design details like icon size, border-radius, or shadow.</comment>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                </field>
+                <field id="twitter_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="twitter_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="twitter_card_enable" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Twitter Card</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="twitter_card_type" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Twitter Card Type</label>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\TwitterCardTypes</source_model>
+                    <comment>Choose between "summary", "summary_large_image", "app", or "player".</comment>
+                </field>
+            </group>
+
+            <group id="linkedin_group" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>LinkedIn Settings</label>
+                <field id="linkedin" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable LinkedIn Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!-- Added design field -->
+                <field id="linkedin_design" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>LinkedIn Icon Design</label>
+                    <comment>Specify design details like icon size, border-radius, or shadow.</comment>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                </field>
+                <field id="linkedin_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>LinkedIn Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="linkedin_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>LinkedIn Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+
+            <group id="whatsapp_group" translate="label" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>WhatsApp Settings</label>
+                <field id="whatsapp" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable WhatsApp Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                  <!-- Added design field -->
+                    <field id="whatsapp_design" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                        <label>WhatsApp Icon Design</label>
+                        <comment>Specify design details like icon size, border-radius, or shadow.</comment>
+                        <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                    </field>
+                <field id="whatsapp_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="whatsapp_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>WhatsApp Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+            
+            <group id="pinterest_group" translate="label" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Pinterest Settings</label>
+                <field id="pinterest" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Pinterest Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <!-- Added design field -->
+                <field id="pinterest_design" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest Icon Design</label>
+                    <comment>Specify design details like icon size, border-radius, or shadow.</comment>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                </field>
+                <field id="pinterest_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="pinterest_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Pinterest Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+
+            <group id="reddit_group" translate="label" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Reddit Settings</label>
+                <field id="reddit" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Reddit Icon</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                  <!-- Added design field -->
+                <field id="reddit_design" translate="label" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Reddit Icon Design</label>
+                    <comment>Specify design details like icon size, border-radius, or shadow.</comment>
+                    <source_model>Themestar\SocialShare\Model\Config\Source\DesignVersions</source_model>
+                </field>
+                <field id="reddit_icon_color" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Reddit Icon Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+                <field id="reddit_bg_color" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Reddit Background Color</label>
+                    <frontend_model>Themestar\SocialShare\Block\Adminhtml\ColorPicker</frontend_model>
+                </field>
+            </group>
+
+            <group id="custom_css_group" translate="label" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Custom CSS</label>
+                <field id="custom_css" translate="label" type="textarea" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Add Custom CSS</label>
+                    <comment>Add your custom CSS code here. This will only affect the social share module.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
