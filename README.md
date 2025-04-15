@@ -2,7 +2,7 @@ How to install, configure, and use the **Themestar Social Share** Magento 2 modu
 
 ---
 
-```markdown
+
 # Themestar Social Share for Magento 2
 
 A customizable Magento 2 extension to enable social media sharing with support for Facebook, Twitter, LinkedIn, WhatsApp, Pinterest, and Reddit. Includes features like Open Graph and Twitter Cards, along with customizable icon designs and colors.
@@ -107,6 +107,4 @@ A color picker is used in the admin panel for easy selection.
 ## 🧾 License
 
 MIT License © [Themestar]
-```
 
----
